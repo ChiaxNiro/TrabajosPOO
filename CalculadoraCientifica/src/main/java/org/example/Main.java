@@ -2,7 +2,7 @@ package org.example;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("El perimetro del rectangulo es: "+perimetroRectangulo());
+        System.out.println("El volumen de la esfera es: "+areaRectangulo());
 
     }
     public static int[] ingresoNum() {
@@ -48,7 +48,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese el lado del cubo");
         int lado = sc.nextInt();
-        int area = lado*lado*lado;
+        int area = lado*lado*6;
         return area;
     }
     public static double areaCono(){
@@ -83,7 +83,28 @@ public class Main {
         double area = radio*2*Math.PI;
         return area;
     }
-
-
+    public static double volumenEsfera(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese el radio de la esfera");
+        int radio = sc.nextInt();
+        double volumen = (4.0/3.0)*Math.PI*Math.pow(radio,3);
+        return volumen;
+    }
+    public static double volumenCubo(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese el lado del cubo");
+        int lado = sc.nextInt();
+        double volumen = Math.pow(lado,3);
+        return volumen;
+    }
+    public static double volumenCono(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese el radio del cono");
+        int radio = sc.nextInt();
+        System.out.println("Ingrese la altura del cono");
+        int altura = sc.nextInt();
+        double volumen = (1.0/3.0)*Math.PI*radio*radio*altura;
+        return volumen;
+    }
     }
 
